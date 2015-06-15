@@ -1,0 +1,9 @@
+C:\Data\programming\projects\RestroomLocator\trunk\RestroomLocator.WebAPI\RestroomLocator.BLL\bin\Debug\RestroomLocator.BLL.dll
+C:\Data\programming\projects\RestroomLocator\trunk\RestroomLocator.WebAPI\RestroomLocator.BLL\bin\Debug\RestroomLocator.BLL.pdb
+C:\Data\programming\projects\RestroomLocator\trunk\RestroomLocator.WebAPI\RestroomLocator.BLL\bin\Debug\RestroomLocator.BO.dll
+C:\Data\programming\projects\RestroomLocator\trunk\RestroomLocator.WebAPI\RestroomLocator.BLL\bin\Debug\RestroomLocator.Model.dll
+C:\Data\programming\projects\RestroomLocator\trunk\RestroomLocator.WebAPI\RestroomLocator.BLL\bin\Debug\RestroomLocator.BO.pdb
+C:\Data\programming\projects\RestroomLocator\trunk\RestroomLocator.WebAPI\RestroomLocator.BLL\bin\Debug\RestroomLocator.Model.pdb
+C:\Data\programming\projects\RestroomLocator\trunk\RestroomLocator.WebAPI\RestroomLocator.BLL\obj\Debug\RestroomLocator.BLL.csprojResolveAssemblyReference.cache
+C:\Data\programming\projects\RestroomLocator\trunk\RestroomLocator.WebAPI\RestroomLocator.BLL\obj\Debug\RestroomLocator.BLL.dll
+C:\Data\programming\projects\RestroomLocator\trunk\RestroomLocator.WebAPI\RestroomLocator.BLL\obj\Debug\RestroomLocator.BLL.pdb

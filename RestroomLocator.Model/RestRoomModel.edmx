@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="RestroomLocatorModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="RestroomLocatorModelStoreContainer">
+          <EntitySet Name="RestRoom" EntityType="RestroomLocatorModel.Store.RestRoom" store:Type="Tables" store:Schema="dbo" store:Name="RestRoom">
+            <DefiningQuery>SELECT 
+      [RestRoom].[RestRoomId] AS [RestRoomId], 
+      [RestRoom].[Name] AS [Name], 
+      [RestRoom].[City] AS [City], 
+      [RestRoom].[Address] AS [Address], 
+      [RestRoom].[Lattitude] AS [Lattitude], 
+      [RestRoom].[Longitude] AS [Longitude], 
+      [RestRoom].[Cost] AS [Cost], 
+      [RestRoom].[Category] AS [Category], 
+      [RestRoom].[WhoCanAccess] AS [WhoCanAccess], 
+      [RestRoom].[Timings] AS [Timings], 
+      [RestRoom].[Description] AS [Description], 
+      [RestRoom].[IsDeleted] AS [IsDeleted], 
+      [RestRoom].[Image] AS [Image], 
+      [RestRoom].[LastChgDate] AS [LastChgDate], 
+      [RestRoom].[LastChgUser] AS [LastChgUser]
+      FROM [dbo].[RestRoom] AS [RestRoom]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="UsersRating" EntityType="RestroomLocatorModel.Store.UsersRating" store:Type="Tables" store:Schema="dbo" store:Name="UsersRating">
+            <DefiningQuery>SELECT 
+      [UsersRating].[UsersRatingId] AS [UsersRatingId], 
+      [UsersRating].[RestRoomId] AS [RestRoomId], 
+      [UsersRating].[UserName] AS [UserName], 
+      [UsersRating].[CleannessRating] AS [CleannessRating], 
+      [UsersRating].[PrivacyRating] AS [PrivacyRating], 
+      [UsersRating].[UserComments] AS [UserComments], 
+      [UsersRating].[LastChgDate] AS [LastChgDate]
+      FROM [dbo].[UsersRating] AS [UsersRating]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'RestroomLocator.dbo.RestRoom' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="RestRoom">
+          <Key>
+            <PropertyRef Name="RestRoomId" />
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="Address" />
+          </Key>
+          <Property Name="RestRoomId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="City" Type="varchar" MaxLength="100" />
+          <Property Name="Address" Type="varchar" Nullable="false" MaxLength="500" />
+          <Property Name="Lattitude" Type="varchar" MaxLength="30" />
+          <Property Name="Longitude" Type="varchar" MaxLength="30" />
+          <Property Name="Cost" Type="varchar" MaxLength="10" />
+          <Property Name="Category" Type="varchar" MaxLength="100" />
+          <Property Name="WhoCanAccess" Type="varchar" MaxLength="100" />
+          <Property Name="Timings" Type="varchar" MaxLength="100" />
+          <Property Name="Description" Type="varchar" MaxLength="500" />
+          <Property Name="IsDeleted" Type="bit" />
+          <Property Name="Image" Type="varchar" MaxLength="500" />
+          <Property Name="LastChgDate" Type="datetime" />
+          <Property Name="LastChgUser" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'RestroomLocator.dbo.UsersRating' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="UsersRating">
+          <Key>
+            <PropertyRef Name="UsersRatingId" />
+          </Key>
+          <Property Name="UsersRatingId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="RestRoomId" Type="bigint" />
+          <Property Name="UserName" Type="varchar" MaxLength="100" />
+          <Property Name="CleannessRating" Type="smallint" />
+          <Property Name="PrivacyRating" Type="smallint" />
+          <Property Name="UserComments" Type="varchar(max)" />
+          <Property Name="LastChgDate" Type="datetime" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="RestroomLocatorModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="RestroomLocatorEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="RestRooms" EntityType="RestroomLocatorModel.RestRoom" />
+          <EntitySet Name="UsersRatings" EntityType="RestroomLocatorModel.UsersRating" />
+        </EntityContainer>
+        <EntityType Name="RestRoom">
+          <Key>
+            <PropertyRef Name="RestRoomId" />
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="Address" />
+          </Key>
+          <Property Name="RestRoomId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="City" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="Address" Type="String" Nullable="false" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="Lattitude" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="Longitude" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="Cost" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="Category" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="WhoCanAccess" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="Timings" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="IsDeleted" Type="Boolean" />
+          <Property Name="Image" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="LastChgDate" Type="DateTime" />
+          <Property Name="LastChgUser" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="UsersRating">
+          <Key>
+            <PropertyRef Name="UsersRatingId" />
+          </Key>
+          <Property Type="Int64" Name="UsersRatingId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int64" Name="RestRoomId" />
+          <Property Type="String" Name="UserName" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Int16" Name="CleannessRating" />
+          <Property Type="Int16" Name="PrivacyRating" />
+          <Property Type="String" Name="UserComments" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="LastChgDate" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="RestroomLocatorModelStoreContainer" CdmEntityContainer="RestroomLocatorEntities">
+          <EntitySetMapping Name="RestRooms">
+            <EntityTypeMapping TypeName="RestroomLocatorModel.RestRoom">
+              <MappingFragment StoreEntitySet="RestRoom">
+                <ScalarProperty Name="RestRoomId" ColumnName="RestRoomId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Lattitude" ColumnName="Lattitude" />
+                <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+                <ScalarProperty Name="Cost" ColumnName="Cost" />
+                <ScalarProperty Name="Category" ColumnName="Category" />
+                <ScalarProperty Name="WhoCanAccess" ColumnName="WhoCanAccess" />
+                <ScalarProperty Name="Timings" ColumnName="Timings" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="LastChgDate" ColumnName="LastChgDate" />
+                <ScalarProperty Name="LastChgUser" ColumnName="LastChgUser" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UsersRatings">
+            <EntityTypeMapping TypeName="RestroomLocatorModel.UsersRating">
+              <MappingFragment StoreEntitySet="UsersRating">
+                <ScalarProperty Name="LastChgDate" ColumnName="LastChgDate" />
+                <ScalarProperty Name="UserComments" ColumnName="UserComments" />
+                <ScalarProperty Name="PrivacyRating" ColumnName="PrivacyRating" />
+                <ScalarProperty Name="CleannessRating" ColumnName="CleannessRating" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="RestRoomId" ColumnName="RestRoomId" />
+                <ScalarProperty Name="UsersRatingId" ColumnName="UsersRatingId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="RestRoomModel" ZoomLevel="82">
+        <EntityTypeShape EntityType="RestroomLocatorModel.RestRoom" Width="1.5" PointX="0.75" PointY="0.75" Height="3.9033007812499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="RestroomLocatorModel.UsersRating" Width="1.5" PointX="3.375" PointY="0.75" Height="2.3648893229166665" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

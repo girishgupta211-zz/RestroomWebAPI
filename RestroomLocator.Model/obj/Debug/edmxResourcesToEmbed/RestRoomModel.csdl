@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RestroomLocatorModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="RestroomLocatorEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="RestRooms" EntityType="RestroomLocatorModel.RestRoom" />
+    <EntitySet Name="UsersRatings" EntityType="RestroomLocatorModel.UsersRating" />
+  </EntityContainer>
+  <EntityType Name="RestRoom">
+    <Key>
+      <PropertyRef Name="RestRoomId" />
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="Address" />
+    </Key>
+    <Property Name="RestRoomId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="City" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Address" Type="String" Nullable="false" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="Lattitude" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="Longitude" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <Property Name="Cost" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="Category" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="WhoCanAccess" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Timings" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Description" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="IsDeleted" Type="Boolean" />
+    <Property Name="Image" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="LastChgDate" Type="DateTime" />
+    <Property Name="LastChgUser" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="UsersRating">
+    <Key>
+      <PropertyRef Name="UsersRatingId" />
+    </Key>
+    <Property Type="Int64" Name="UsersRatingId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int64" Name="RestRoomId" />
+    <Property Type="String" Name="UserName" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Int16" Name="CleannessRating" />
+    <Property Type="Int16" Name="PrivacyRating" />
+    <Property Type="String" Name="UserComments" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="LastChgDate" />
+  </EntityType>
+</Schema>

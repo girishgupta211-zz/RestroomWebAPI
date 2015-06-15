@@ -1,0 +1,5 @@
+C:\Data\programming\projects\RestroomLocator\trunk\RestroomLocator.WebAPI\RestroomLocator.Model\bin\Debug\RestroomLocator.Model.dll.config
+C:\Data\programming\projects\RestroomLocator\trunk\RestroomLocator.WebAPI\RestroomLocator.Model\bin\Debug\RestroomLocator.Model.dll
+C:\Data\programming\projects\RestroomLocator\trunk\RestroomLocator.WebAPI\RestroomLocator.Model\bin\Debug\RestroomLocator.Model.pdb
+C:\Data\programming\projects\RestroomLocator\trunk\RestroomLocator.WebAPI\RestroomLocator.Model\obj\Debug\RestroomLocator.Model.dll
+C:\Data\programming\projects\RestroomLocator\trunk\RestroomLocator.WebAPI\RestroomLocator.Model\obj\Debug\RestroomLocator.Model.pdb

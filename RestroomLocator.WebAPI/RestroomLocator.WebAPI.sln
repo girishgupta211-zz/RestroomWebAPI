@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestroomLocator.WebAPI", "RestroomLocator.WebAPI\RestroomLocator.WebAPI.csproj", "{BF2AF1D3-855E-4F30-8D5C-CFCD7EE0079D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestroomLocator.BLL", "..\RestroomLocator.BLL\RestroomLocator.BLL.csproj", "{CBF0C743-332C-4B8C-9BBF-9BF9464AC900}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestroomLocator.Model", "..\RestroomLocator.Model\RestroomLocator.Model.csproj", "{6B1758D3-C796-4297-BF3F-86FE69B16CB0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestroomLocator.BO", "..\RestroomLocator.BO\RestroomLocator.BO.csproj", "{25E7A0CE-2B1B-45B0-A717-268313F88506}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BF2AF1D3-855E-4F30-8D5C-CFCD7EE0079D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF2AF1D3-855E-4F30-8D5C-CFCD7EE0079D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF2AF1D3-855E-4F30-8D5C-CFCD7EE0079D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF2AF1D3-855E-4F30-8D5C-CFCD7EE0079D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBF0C743-332C-4B8C-9BBF-9BF9464AC900}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBF0C743-332C-4B8C-9BBF-9BF9464AC900}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBF0C743-332C-4B8C-9BBF-9BF9464AC900}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBF0C743-332C-4B8C-9BBF-9BF9464AC900}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B1758D3-C796-4297-BF3F-86FE69B16CB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B1758D3-C796-4297-BF3F-86FE69B16CB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B1758D3-C796-4297-BF3F-86FE69B16CB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B1758D3-C796-4297-BF3F-86FE69B16CB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25E7A0CE-2B1B-45B0-A717-268313F88506}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25E7A0CE-2B1B-45B0-A717-268313F88506}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25E7A0CE-2B1B-45B0-A717-268313F88506}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25E7A0CE-2B1B-45B0-A717-268313F88506}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

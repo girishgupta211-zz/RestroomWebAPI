@@ -1,0 +1,6 @@
+<Modules>
+  <Module PersistentId="BF2AF1D3-855E-4F30-8D5C-CFCD7EE0079D" ModuleId="RestroomLocator.WebAPI" />
+  <Module PersistentId="CBF0C743-332C-4B8C-9BBF-9BF9464AC900" ModuleId="RestroomLocator.BLL" />
+  <Module PersistentId="6B1758D3-C796-4297-BF3F-86FE69B16CB0" ModuleId="RestroomLocator.Model" />
+  <Module PersistentId="25E7A0CE-2B1B-45B0-A717-268313F88506" ModuleId="RestroomLocator.BO" />
+</Modules>

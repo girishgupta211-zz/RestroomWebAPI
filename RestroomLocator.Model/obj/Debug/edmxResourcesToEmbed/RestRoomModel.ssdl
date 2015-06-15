@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RestroomLocatorModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="RestroomLocatorModelStoreContainer">
+    <EntitySet Name="RestRoom" EntityType="RestroomLocatorModel.Store.RestRoom" store:Type="Tables" store:Schema="dbo" store:Name="RestRoom">
+      <DefiningQuery>SELECT 
+      [RestRoom].[RestRoomId] AS [RestRoomId], 
+      [RestRoom].[Name] AS [Name], 
+      [RestRoom].[City] AS [City], 
+      [RestRoom].[Address] AS [Address], 
+      [RestRoom].[Lattitude] AS [Lattitude], 
+      [RestRoom].[Longitude] AS [Longitude], 
+      [RestRoom].[Cost] AS [Cost], 
+      [RestRoom].[Category] AS [Category], 
+      [RestRoom].[WhoCanAccess] AS [WhoCanAccess], 
+      [RestRoom].[Timings] AS [Timings], 
+      [RestRoom].[Description] AS [Description], 
+      [RestRoom].[IsDeleted] AS [IsDeleted], 
+      [RestRoom].[Image] AS [Image], 
+      [RestRoom].[LastChgDate] AS [LastChgDate], 
+      [RestRoom].[LastChgUser] AS [LastChgUser]
+      FROM [dbo].[RestRoom] AS [RestRoom]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="UsersRating" EntityType="RestroomLocatorModel.Store.UsersRating" store:Type="Tables" store:Schema="dbo" store:Name="UsersRating">
+      <DefiningQuery>SELECT 
+      [UsersRating].[UsersRatingId] AS [UsersRatingId], 
+      [UsersRating].[RestRoomId] AS [RestRoomId], 
+      [UsersRating].[UserName] AS [UserName], 
+      [UsersRating].[CleannessRating] AS [CleannessRating], 
+      [UsersRating].[PrivacyRating] AS [PrivacyRating], 
+      [UsersRating].[UserComments] AS [UserComments], 
+      [UsersRating].[LastChgDate] AS [LastChgDate]
+      FROM [dbo].[UsersRating] AS [UsersRating]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'RestroomLocator.dbo.RestRoom' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="RestRoom">
+    <Key>
+      <PropertyRef Name="RestRoomId" />
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="Address" />
+    </Key>
+    <Property Name="RestRoomId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="City" Type="varchar" MaxLength="100" />
+    <Property Name="Address" Type="varchar" Nullable="false" MaxLength="500" />
+    <Property Name="Lattitude" Type="varchar" MaxLength="30" />
+    <Property Name="Longitude" Type="varchar" MaxLength="30" />
+    <Property Name="Cost" Type="varchar" MaxLength="10" />
+    <Property Name="Category" Type="varchar" MaxLength="100" />
+    <Property Name="WhoCanAccess" Type="varchar" MaxLength="100" />
+    <Property Name="Timings" Type="varchar" MaxLength="100" />
+    <Property Name="Description" Type="varchar" MaxLength="500" />
+    <Property Name="IsDeleted" Type="bit" />
+    <Property Name="Image" Type="varchar" MaxLength="500" />
+    <Property Name="LastChgDate" Type="datetime" />
+    <Property Name="LastChgUser" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'RestroomLocator.dbo.UsersRating' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="UsersRating">
+    <Key>
+      <PropertyRef Name="UsersRatingId" />
+    </Key>
+    <Property Name="UsersRatingId" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RestRoomId" Type="bigint" />
+    <Property Name="UserName" Type="varchar" MaxLength="100" />
+    <Property Name="CleannessRating" Type="smallint" />
+    <Property Name="PrivacyRating" Type="smallint" />
+    <Property Name="UserComments" Type="varchar(max)" />
+    <Property Name="LastChgDate" Type="datetime" />
+  </EntityType>
+</Schema>

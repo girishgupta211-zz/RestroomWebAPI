@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="RestroomLocatorModelStoreContainer" CdmEntityContainer="RestroomLocatorEntities">
+    <EntitySetMapping Name="RestRooms">
+      <EntityTypeMapping TypeName="RestroomLocatorModel.RestRoom">
+        <MappingFragment StoreEntitySet="RestRoom">
+          <ScalarProperty Name="RestRoomId" ColumnName="RestRoomId" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Lattitude" ColumnName="Lattitude" />
+          <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+          <ScalarProperty Name="Cost" ColumnName="Cost" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="WhoCanAccess" ColumnName="WhoCanAccess" />
+          <ScalarProperty Name="Timings" ColumnName="Timings" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="LastChgDate" ColumnName="LastChgDate" />
+          <ScalarProperty Name="LastChgUser" ColumnName="LastChgUser" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UsersRatings">
+      <EntityTypeMapping TypeName="RestroomLocatorModel.UsersRating">
+        <MappingFragment StoreEntitySet="UsersRating">
+          <ScalarProperty Name="LastChgDate" ColumnName="LastChgDate" />
+          <ScalarProperty Name="UserComments" ColumnName="UserComments" />
+          <ScalarProperty Name="PrivacyRating" ColumnName="PrivacyRating" />
+          <ScalarProperty Name="CleannessRating" ColumnName="CleannessRating" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="RestRoomId" ColumnName="RestRoomId" />
+          <ScalarProperty Name="UsersRatingId" ColumnName="UsersRatingId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
